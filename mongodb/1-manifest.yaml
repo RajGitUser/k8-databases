@@ -1,3 +1,4 @@
+# service, headless service, statefulset, pvc
 apiVersion: v1
 kind: Service
 metadata:
@@ -9,9 +10,9 @@ spec:
     component: mongodb
     tier: db
   ports:
-  - protocol: TCP
-    port: 27017
-    targetPort: 27017
+    - protocol: TCP
+      port: 27017 # service port
+      targetPort: 27017 # container port
 ---
 apiVersion: v1
 kind: Service
@@ -25,9 +26,9 @@ spec:
     component: mongodb
     tier: db
   ports:
-  - protocol: TCP
-    port: 27017
-    targetPort: 27017
+    - protocol: TCP
+      port: 27017 # service port
+      targetPort: 27017 # container port
 ---
 apiVersion: apps/v1
 kind: StatefulSet
