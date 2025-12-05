@@ -19,7 +19,7 @@ metadata:
   name: mongodb-headless
   namespace: roboshop
 spec:
-  clusteIP: None
+  clusterIP: None
   selector:
     project: roboshop
     component: mongodb
